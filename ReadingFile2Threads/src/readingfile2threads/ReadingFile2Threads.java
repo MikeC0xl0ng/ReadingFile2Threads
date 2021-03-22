@@ -25,8 +25,9 @@ public class ReadingFile2Threads {
         System.out.println("Low priority Thread's record is  " + lowPriorityThreadRecord);
         
         int diff = highPriorityThreadRecord - lowPriorityThreadRecord;
-        
-        System.out.println("High priority Thread read " + diff + " more than low priority Thread, which corresponds to " + (diff / (lowPriorityThreadRecord * 100)) + "%");
+        int boh = diff/lowPriorityThreadRecord;
+        double percentageDiff = boh*100;
+        System.out.println("High priority Thread read " + diff + " more than low priority Thread, which corresponds to " + percentageDiff + "%");
         
         System.exit(0);
     }
